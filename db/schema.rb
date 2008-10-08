@@ -9,26 +9,6 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20081007211840) do
-
-  create_table "vcards", :force => true do |t|
-    t.string   "location"
-    t.string   "street"
-    t.string   "locality"
-    t.string   "region"
-    t.string   "postalcode"
-    t.string   "country"
-    t.string   "first_name"
-    t.string   "last_name"
-    t.string   "org"
-    t.string   "email1"
-    t.string   "email1_type"
-    t.string   "email2"
-    t.string   "email2_type"
-    t.float    "lat"
-    t.float    "lng"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+ActiveRecord::Schema.define(:version => 0) do
 
 end

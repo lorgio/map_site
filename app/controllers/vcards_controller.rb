@@ -12,55 +12,48 @@ class VcardsController < ApplicationController
       format.xml  { render :xml => @vcards }
     end
   end
-  
+
   def import
     cards = Vpim::Vcard.decode(params[:vcard][:datafile].read)                
 
     cards.each do |card|
-if card['X-ABSHOWAS'].eql?("COMPANY")      
-      last_name, first_name = card['N'].split(';')
-      full_name = card['FN']
-      # nickname = card['NICKNAME']
+      if card['X-ABSHOWAS'].eql?("COMPANY")      
+        last_name, first_name = card['N'].split(';')
+        full_name = card['FN']
+        home_phone = card['TEL', 'HOME']
+        work_phone = card['TEL', 'WORK']      
+        address_work = card['ADR', 'WORK']
+        address_work = address_work.gsub(/\\,/,'.') if address_work.kind_of?(String)
+        address_work = address_work.gsub(/\\,/,'.') if address_work.kind_of?(String)
+        logger.debug { "ADDRES_WORK:#{address_work}" }
+        street, city, state, zip_code, country  = address_work.split(";").delete_if {|x| x.blank?} unless address_work.blank?
+        title = card['TITLE']
+        org = card['ORG']
+        org = org.gsub(/\\,/,'.') if org.kind_of?(String)
+        url = card['URL']
+        notes = card['NOTE']
 
-      # Depending on contact Evolution used different types for email field
-      # In my case order of importance for emails was as below.
-      # Luckily no contact have had more than two emails
-      # raise card['EMAIL', 'INTERNET'].to_yaml
-      # email_internet = card['EMAIL', 'INTERNET']
-      # email_work = card['EMAIL', 'WORK']
-      # email_home = card['EMAIL', 'HOME']
-      # email_other = card['EMAIL', 'OTHER']
-      # emails = []
-      # [email_internet, email_work, email_home, email_other].each {|email| email && emails << email}
+        vcard1 = Vcard.create :first_name => first_name,
+                              :last_name  => last_name,
+                              :org        => org,
+                              :work_phone => work_phone,
+                              :home_phone => home_phone,
+                              :url        => url,
+                              :street     => street, 
+                              :city       => city, 
+                              :state      => state, 
+                              :zip_code   => zip_code, 
+                              :country    => country
+      end
 
-      home_phone = card['TEL', 'HOME']
-      work_phone = card['TEL', 'WORK']
-      
-      # tel_fax = card['TEL', 'FAX']
-      # tel_mobile = card['TEL', 'CELL']
-      # address = card['ADR', 'HOME']
-      # address = address.gsub(/\\,/,'.') if address.kind_of?(String)
-      address_work = card['ADR', 'WORK']
-      address_work = address_work.gsub(/\\,/,'.') if address_work.kind_of?(String)
-
-      title = card['TITLE']
-      # organization = card['ORG']
-      org = card['ORG']
-      org = org.gsub(/\\,/,'.') if org.kind_of?(String)
-      url = card['URL']
-      notes = card['NOTE']
-
-      # Full list of fields:
-      ##{address},,,,,,#{address_work},,,,
-      # first,last,display,nickname,email,add email,work phone,home phone,fax,pager,mobile,address,address2,city,state,zip,country,address work,address work2,city work,state work,zip work,country work,title,departament,organization,http://web page work,http://web page,,,,custom 1,custom 2,custom 3,custom 4,notes,
-
-      # logger.debug  "#{first_name}, #{last_name},#{full_name},#{work_phone},#{home_phone},#{title},,#{org},,#{url},,,,,,,,#{notes}," 
-      # logger.debug { "#{card.to_yaml}" }
-end
     end
 
+    respond_to do |format|
+      flash[:notice] = 'Vcard was successfully created.'
+      format.html { redirect_to(vcards_url) }
+    end    
   end
-  
+
   # GET /vcards/1
   # GET /vcards/1.xml
   def show
@@ -133,74 +126,4 @@ end
       format.xml  { head :ok }
     end
   end
-
-  #################################################################################  
-  def get_contact
-    contact = Address.find(params[:id])
-    company = OfficeAddress.find(contact.office_address_id)
-
-    card = Vpim::Vcard::Maker.make2 do |maker|
-
-      maker.add_name do |name|
-        name.given = contact.firstname + ' ' + contact.lastname
-      end
-
-      maker.add_addr do |addr|
-        addr.location = ‘home’
-        addr.street = contact.street
-        addr.locality = contact.area
-        addr.region = contact.state
-        addr.postalcode = contact.pin
-        addr.country = contact.country
-      end
-
-      maker.add_addr do |addr|
-        addr.location = ‘work’
-        addr.street = company.street
-        addr.locality = company.area
-        addr.region = company.state
-        addr.postalcode = company.pin
-        addr.country = company.country
-      end
-
-      if !contact.ph_resi.empty?
-        maker.add_tel(contact.ph_resi) do |tel|
-          tel.location = ‘home’
-          tel.preferred = true
-        end
-      end
-
-      if !contact.ph_office.empty?
-        phone = contact.ph_office
-        maker.add_tel(phone) do |tel|
-          tel.location = ‘work’
-          tel.preferred = true
-        end
-      end
-
-      if !contact.fax.empty?
-        maker.add_tel(contact.fax) do |tel|
-          tel.location = ‘work’
-          tel.capability = ‘fax’
-        end
-      end
-
-      if !contact.mobile.empty?
-        maker.add_tel(contact.mobile) do |tel|
-          tel.location = ‘home’
-          tel.capability = ‘mobile’
-        end
-      end
-
-      maker.add_email(contact.email) do |e|
-        e.location = ‘work’
-      end
-
-    end
-
-    send_data card.to_s,
-    :filename => “contact.vcf”
-  end
-
-
 end

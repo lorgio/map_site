@@ -3,9 +3,9 @@ class CreateVcards < ActiveRecord::Migration
     create_table :vcards do |t|
       t.string :location
       t.string :street
-      t.string :locality
-      t.string :region
-      t.string :postalcode
+      t.string :city
+      t.string :state
+      t.string :zip_code
       t.string :country
       t.string :first_name
       t.string :last_name
@@ -16,9 +16,9 @@ class CreateVcards < ActiveRecord::Migration
       t.string :email2_type
       t.string :work_phone
       t.string :home_phone
+      t.string :url
       t.float :lat
-      t.float :lng
-
+      t.float :lng      
       t.timestamps
     end
   end
