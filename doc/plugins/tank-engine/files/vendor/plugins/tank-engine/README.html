@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>File: README</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href="../../../.././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+  <div id="fileHeader">
+    <h1>README</h1>
+    <table class="header-table">
+    <tr class="top-aligned-row">
+      <td><strong>Path:</strong></td>
+      <td>vendor/plugins/tank-engine/README
+      </td>
+    </tr>
+    <tr class="top-aligned-row">
+      <td><strong>Last Update:</strong></td>
+      <td>Tue Oct 07 16:17:07 -0400 2008</td>
+    </tr>
+    </table>
+  </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+    <div id="description">
+      <p>
+TankEngine
+</p>
+<h6>====</h6>
+<p>
+A Rails toolkit for creating applications optimized for Mobile Safari,
+iPhone, and the iPhone touch. Based on the iUI look and feel library.
+</p>
+<p>
+Contact
+</p>
+<h6>=</h6>
+<p>
+Contact the author at noelrappin at gmail.com
+</p>
+<p>
+Example
+</p>
+<h6>=</h6>
+<p>
+This plugin uses jQuery to manage it&#8216;s JavaScript needs. The jRails
+plugin (<a
+href="http://ennerchi.com/projects/jrails">ennerchi.com/projects/jrails</a>)
+is recommended &#8212; it converts Rails Prototype/Scriptaculous helpers to
+jQuery.
+</p>
+<p>
+After installing the plugin, perform
+</p>
+<p>
+rake tank_engine:install
+</p>
+<p>
+to copy the public assets (images, javascript, and CSS) to the public
+folder.
+</p>
+<p>
+Tank engine places an iPhone layout file in
+app/views/layouts/application.iphone.erb.
+</p>
+<p>
+Controller Usage
+</p>
+<h6>==========</h6>
+<p>
+The module <a
+href="../../../../classes/ActionController/IphoneController.html">ActionController::IphoneController</a>
+adds support for recognizing Mobile Safari as the :iphone pseudo-MIME type.
+</p>
+<p>
+In your controller (can be ApplicationController) add the line
+</p>
+<p>
+acts_as_iphone_controller
+</p>
+<p>
+By default, the following requests are redirected to the iphone format.
+</p>
+<ul>
+<li>Requests with a user agent including &quot;Mobile Safari&quot;. To change
+this
+
+</li>
+</ul>
+<p>
+default, pass the option :ignore_iphone_user_agent =&gt; true to
+acts_as_iphone_controller.
+</p>
+<ul>
+<li>Requests which end in &quot;.iphone&quot;. To change this default, pass the
+option
+
+</li>
+</ul>
+<p>
+:format =&gt; &lt;YOURFORMAT&gt; to acts_as_iphone_controller.
+</p>
+<ul>
+<li>Requests to a subdomain &quot;iphone&quot;. To change this default, pass
+the option
+
+</li>
+</ul>
+<p>
+:subdomain =&gt; &lt;YOURFORMAT&gt; to acts_as_iphone_controller.
+</p>
+<p>
+The option :test_mode =&gt; true will cause all requests to be treated as
+iPhone requests.
+</p>
+<p>
+To capture these requests, you can use :iphone as part of a respond_to
+block:
+</p>
+<p>
+respond_to do |format|
+</p>
+<pre>
+  format.html # show.html.erb
+  format.xml  { render :xml =&gt; @feature }
+  format.iphone
+</pre>
+<p>
+end
+</p>
+<p>
+The file extension for the view is .iphone.erb
+</p>
+<p>
+The module <a
+href="../../../../classes/TankEngineHelper.html">TankEngineHelper</a>
+provides a number of helper methods for creating iPhone structures in your
+views.
+</p>
+<p>
+When this plugin is installed, form builders have a new helper
+&quot;toggle&quot; that creates an iPhone style toggle switch.
+</p>
+<p>
+Copyright (c) 2008 Noel Rappin, released under the MIT license
+</p>
+
+    </div>
+
+
+   </div>
+
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+
+
+
+      
+
+
+    <!-- if method_list -->
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

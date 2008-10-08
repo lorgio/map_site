@@ -1,0 +1,55 @@
+<h1>Listing vcards</h1>
+
+<h1>File Upload</h1>
+<% form_for(:vcard, :url => import_vcards_path, :html => { :multipart => true }) do |f| %>
+<p><label for="upload_file">Select File</label> : 
+<%= f.file_field :datafile %></p>
+<%= f.submit "Upload" %>
+<% end  %>
+
+<table>
+  <tr>
+    <th>Location</th>
+    <th>Street</th>
+    <th>Locality</th>
+    <th>Region</th>
+    <th>Postalcode</th>
+    <th>Country</th>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Org</th>
+    <th>Email1</th>
+    <th>Email1 type</th>
+    <th>Email2</th>
+    <th>Email2 type</th>
+    <th>Lat</th>
+    <th>Lng</th>
+  </tr>
+
+<% for vcard in @vcards %>
+  <tr>
+    <td><%=h vcard.location %></td>
+    <td><%=h vcard.street %></td>
+    <td><%=h vcard.locality %></td>
+    <td><%=h vcard.region %></td>
+    <td><%=h vcard.postalcode %></td>
+    <td><%=h vcard.country %></td>
+    <td><%=h vcard.first_name %></td>
+    <td><%=h vcard.last_name %></td>
+    <td><%=h vcard.org %></td>
+    <td><%=h vcard.email1 %></td>
+    <td><%=h vcard.email1_type %></td>
+    <td><%=h vcard.email2 %></td>
+    <td><%=h vcard.email2_type %></td>
+    <td><%=h vcard.lat %></td>
+    <td><%=h vcard.lng %></td>
+    <td><%= link_to 'Show', vcard %></td>
+    <td><%= link_to 'Edit', edit_vcard_path(vcard) %></td>
+    <td><%= link_to 'Destroy', vcard, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New vcard', new_vcard_path %>

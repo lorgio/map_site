@@ -1,0 +1,2 @@
+module VcardsHelper
+end

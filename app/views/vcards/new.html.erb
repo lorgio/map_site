@@ -1,0 +1,71 @@
+<h1>New vcard</h1>
+
+<% form_for(@vcard) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :location %><br />
+    <%= f.text_field :location %>
+  </p>
+  <p>
+    <%= f.label :street %><br />
+    <%= f.text_field :street %>
+  </p>
+  <p>
+    <%= f.label :locality %><br />
+    <%= f.text_field :locality %>
+  </p>
+  <p>
+    <%= f.label :region %><br />
+    <%= f.text_field :region %>
+  </p>
+  <p>
+    <%= f.label :postalcode %><br />
+    <%= f.text_field :postalcode %>
+  </p>
+  <p>
+    <%= f.label :country %><br />
+    <%= f.text_field :country %>
+  </p>
+  <p>
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name %>
+  </p>
+  <p>
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name %>
+  </p>
+  <p>
+    <%= f.label :org %><br />
+    <%= f.text_field :org %>
+  </p>
+  <p>
+    <%= f.label :email1 %><br />
+    <%= f.text_field :email1 %>
+  </p>
+  <p>
+    <%= f.label :email1_type %><br />
+    <%= f.text_field :email1_type %>
+  </p>
+  <p>
+    <%= f.label :email2 %><br />
+    <%= f.text_field :email2 %>
+  </p>
+  <p>
+    <%= f.label :email2_type %><br />
+    <%= f.text_field :email2_type %>
+  </p>
+  <p>
+    <%= f.label :lat %><br />
+    <%= f.text_field :lat %>
+  </p>
+  <p>
+    <%= f.label :lng %><br />
+    <%= f.text_field :lng %>
+  </p>
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', vcards_path %>

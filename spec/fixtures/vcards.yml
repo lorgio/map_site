@@ -1,0 +1,35 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  location: MyString
+  street: MyString
+  locality: MyString
+  region: MyString
+  postalcode: MyString
+  country: MyString
+  first_name: MyString
+  last_name: MyString
+  org: MyString
+  email1: MyString
+  email1_type: MyString
+  email2: MyString
+  email2_type: MyString
+  lat: 1.5
+  lng: 1.5
+
+two:
+  location: MyString
+  street: MyString
+  locality: MyString
+  region: MyString
+  postalcode: MyString
+  country: MyString
+  first_name: MyString
+  last_name: MyString
+  org: MyString
+  email1: MyString
+  email1_type: MyString
+  email2: MyString
+  email2_type: MyString
+  lat: 1.5
+  lng: 1.5
