@@ -1,11 +1,26 @@
 require 'vpim/vcard'
+include GeoKit::Mappable
 
 class VcardsController < ApplicationController
+
   # GET /vcards
   # GET /vcards.xml
   def index
-    @vcards = Vcard.find(:all)
+    @vcards = Vcard.find(:all, :conditions => "state='NY'")
     @vcard = Vcard.new
+
+    @map = GMap.new("map_div_id")  
+    @map.control_init(:large_map => true, :map_type => true)  
+    @map.center_zoom_init([40.764762,	-73.978232], 15)  
+    markers = []
+
+    @vcards.each do |card|
+      if card.eql?(@vcards.first)
+        @map.overlay_init(GMarker.new([card.lat, card.lng], :info_window => card.org))
+      else        
+        @map.overlay_init(GMarker.new([card.lat, card.lng], :info_window => card.org))        
+      end
+    end
 
     respond_to do |format|
       format.html # index.html.erb
@@ -16,42 +31,41 @@ class VcardsController < ApplicationController
   def import
     cards = Vpim::Vcard.decode(params[:vcard][:datafile].read)                
 
-    cards.each do |card|
-      if card['X-ABSHOWAS'].eql?("COMPANY")      
-        last_name, first_name = card['N'].split(';')
-        full_name = card['FN']
-        home_phone = card['TEL', 'HOME']
-        work_phone = card['TEL', 'WORK']      
-        address_work = card['ADR', 'WORK']
-        address_work = address_work.gsub(/\\,/,'.') if address_work.kind_of?(String)
-        address_work = address_work.gsub(/\\,/,'.') if address_work.kind_of?(String)
-        logger.debug { "ADDRES_WORK:#{address_work}" }
-        street, city, state, zip_code, country  = address_work.split(";").delete_if {|x| x.blank?} unless address_work.blank?
-        title = card['TITLE']
-        org = card['ORG']
-        org = org.gsub(/\\,/,'.') if org.kind_of?(String)
-        url = card['URL']
-        notes = card['NOTE']
-
-        vcard1 = Vcard.create :first_name => first_name,
-                              :last_name  => last_name,
-                              :org        => org,
-                              :work_phone => work_phone,
-                              :home_phone => home_phone,
-                              :url        => url,
-                              :street     => street, 
-                              :city       => city, 
-                              :state      => state, 
-                              :zip_code   => zip_code, 
-                              :country    => country
-      end
-
-    end
+    Vcard.process_cards(cards)
 
     respond_to do |format|
       flash[:notice] = 'Vcard was successfully created.'
       format.html { redirect_to(vcards_url) }
     end    
+  end
+
+
+  def search
+    logger.debug { "PLACE: #{params[:vcard][:street]}" }
+    loc = GeoKit::Geocoders::GoogleGeocoder.geocode(params[:vcard][:street])    
+    @vcards = Vcard.find(:all, :origin =>[loc.lat,loc.lng], :within=>params[:vcard][:distance])
+    # Find near an address:
+    # Store.find(:all, :origin=>'100 Spear st, San Francisco, CA', :within=>10)
+    @map = GMap.new("map_div_id")  
+    @map.control_init(:large_map => true, :map_type => true)  
+    @map.center_zoom_init([loc.lat, loc.lng], 15)  
+    markers = []
+
+    @vcards.each do |card|
+      if card.eql?(@vcards.first)
+        @map.overlay_init(GMarker.new([card.lat, card.lng], :info_window => card.org))
+      else        
+        @map.overlay_init(GMarker.new([card.lat, card.lng], :info_window => card.org))        
+      end
+    end
+    respond_to do |format|
+      format.js do
+        render :update do |page|
+          page.replace_html 'search_transactions', @map.add_overlay(GMarker.new([12.1,12.76],:title => "Hello again!"))        
+        end
+      end
+    end
+
   end
 
   # GET /vcards/1

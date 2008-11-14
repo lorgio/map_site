@@ -1,5 +1,7 @@
 ## FEATURE SUMMARY
 
+http://ym4r.rubyforge.org/ym4r_gm-doc/
+
 This plugin provides key functionality for location-oriented Rails applications:
 
 - Distance calculations, for both flat and spherical environments. For example, 

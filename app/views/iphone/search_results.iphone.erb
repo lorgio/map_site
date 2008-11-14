@@ -1,0 +1,11 @@
+
+<ul>
+<% for vcard in @vcards %>
+<li>
+	<%=h vcard.org %><br>
+	<%=h sprintf("%.2f", vcard.distance) -%><br>
+	<%=h vcard.street %><br>
+	<%= link_to 'More Info', {:action => 'show', :id => vcard}, :method => :get %>    
+</li>
+<% end %>
+</ul>

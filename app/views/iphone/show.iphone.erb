@@ -1,0 +1,12 @@
+  <tr>
+	<td><%=h @vcard.org %></td>    
+    <td><%=h @vcard.street %></td>
+    <td><%=h @vcard.city %></td>
+    <td><%=h @vcard.state %></td>
+    <td><%=h @vcard.zip_code %></td>
+    <td><%=h @vcard.country %></td>
+	<%= link_to "MAP IT", "http://maps.google.com/maps?f=q&hl=en&geocode=&q=#{@vcard.lat}++%09-#{@vcard.lng}" -%>	
+	<%= link_to "MAP2", "http://maps.google.com/maps?f=q&hl=en&geocode=&q=#{@vcard.lat}++-#{@vcard.lng}&ie=UTF8&z=16&g=#{@vcard.lat}++-#{@vcard.lng}&iwloc=addr" %>
+  </tr>
+
+<!-- http://mapki.com/wiki/Google_Map_Parameters -->

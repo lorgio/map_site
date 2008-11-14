@@ -10,15 +10,14 @@ class CreateVcards < ActiveRecord::Migration
       t.string :first_name
       t.string :last_name
       t.string :org
-      t.string :email1
-      t.string :email1_type
-      t.string :email2
-      t.string :email2_type
+      t.string :work_email
+      t.string :home_email
       t.string :work_phone
       t.string :home_phone
       t.string :url
       t.float :lat
       t.float :lng      
+      t.float :distance
       t.timestamps
     end
   end

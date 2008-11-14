@@ -9,38 +9,24 @@
 
 <table>
   <tr>
-    <th>Location</th>
+	<th>Place</th>
     <th>Street</th>
     <th>Locality</th>
     <th>Region</th>
     <th>Postalcode</th>
     <th>Country</th>
-    <th>First name</th>
-    <th>Last name</th>
-    <th>Org</th>
-    <th>Email1</th>
-    <th>Email1 type</th>
-    <th>Email2</th>
-    <th>Email2 type</th>
     <th>Lat</th>
     <th>Lng</th>
   </tr>
 
 <% for vcard in @vcards %>
   <tr>
-    <td><%=h vcard.location %></td>
+	<td><%=h vcard.org %></td>    
     <td><%=h vcard.street %></td>
     <td><%=h vcard.city %></td>
     <td><%=h vcard.state %></td>
     <td><%=h vcard.zip_code %></td>
     <td><%=h vcard.country %></td>
-    <td><%=h vcard.first_name %></td>
-    <td><%=h vcard.last_name %></td>
-    <td><%=h vcard.org %></td>
-    <td><%=h vcard.email1 %></td>
-    <td><%=h vcard.email1_type %></td>
-    <td><%=h vcard.email2 %></td>
-    <td><%=h vcard.email2_type %></td>
     <td><%=h vcard.lat %></td>
     <td><%=h vcard.lng %></td>
     <td><%= link_to 'Show', vcard %></td>
@@ -53,3 +39,16 @@
 <br />
 
 <%= link_to 'New vcard', new_vcard_path %>
+<%= GMap.header %>  
+<%= @map.to_html %>  
+ <% remote_form_for(:vcard, :url => search_vcards_path, :update =>'map_area', :html => {:method => :get} ) do |f| %>
+<%# remote_form_for(:vcard, :url => vcards_url, :html=>{:method => :get} ) do |f| -%>
+	<p><label for="street">Address</label> : <%= f.text_field  :street %>
+	<label for="distance">distance</label> : <%= f.select  :distance, (1..31).collect{|i| [i,i]} %></p>
+	<%= f.submit "Search" %>
+<% end %>
+<div id="map_area">
+	<%= @map.div(:width => 600, :height => 600) %>
+	
+</div>
+

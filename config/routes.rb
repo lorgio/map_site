@@ -1,6 +1,11 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :vcards, 
-  :collection => {:import => :put}
+  map.resources :vcards, :collection => { :import => :put,
+                                          :search => :get}
+                                          
+  # map.resources :iphone, :collection => {:search_results => :get}
+                                          
+                                          
+                                          
 
   # The priority is based upon order of creation: first created -> highest priority.
 
