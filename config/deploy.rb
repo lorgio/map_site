@@ -58,20 +58,30 @@ default_run_options[:pty] = true
 #	Passenger
 #############################################################
 
-# namespace :deploy do
-#   desc "Restarting mod_rails with restart.txt"
-#   task :restart, :roles => :app, :except => { :no_release => true } do
-#     run "touch #{current_path}/tmp/restart.txt"
-#   end
-
-deploy.task :start do
-  # nothing happens so that the script/spin nohup crap doesn't fail
+namespace :deploy do
+  desc "Restarting mod_rails with restart.txt"
+  task :restart, :roles => :app, :except => { :no_release => true } do
+    run "touch #{current_path}/tmp/restart.txt"
+  end
+  
+  [:start, :stop].each do |t|
+     desc "#{t} task is a no-op with mod_rails"
+     task t, :roles => :app do ; end
+  end 
 end
+# deploy.task :start do
+#   # nothing happens so that the script/spin nohup crap doesn't fail
+# end
+# 
+# deploy.task :restart do
+#   # nothing
+# end
 namespace :passenger do
   desc "Restart Application"
   task :restart do
     run "touch #{current_path}/tmp/restart.txt"
+    run "ln -s #{current_path}/public/personal #{current_path}/shared/personal"
   end
 end
 
-after :deploy, "passenger:restart"
+# after :deploy, "passenger:restart"
