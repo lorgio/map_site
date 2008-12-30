@@ -62,6 +62,7 @@ namespace :deploy do
   desc "Restarting mod_rails with restart.txt"
   task :restart, :roles => :app, :except => { :no_release => true } do
     run "touch #{current_path}/tmp/restart.txt"
+    run "ln -s  #{deploy_to}/shared/personal #{deploy_to}/current/public/personal/index.html"    
   end
   
   [:start, :stop].each do |t|
@@ -80,7 +81,7 @@ namespace :passenger do
   desc "Restart Application"
   task :restart do
     run "touch #{current_path}/tmp/restart.txt"
-    run "ln -s #{current_path}/public/personal #{current_path}/shared/personal"
+    run "ln -s  #{current_path}/shared/personal #{current_path}/public/personal"
   end
 end
 
