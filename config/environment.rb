@@ -44,6 +44,9 @@ Rails::Initializer.run do |config|
   config.time_zone = 'UTC'
 
   config.gem 'vpim'
+  config.gem 'rubyist-aasm'
+  config.active_record.observers = :user_observer
+  
   # Your secret key for verifying cookie session data integrity.
   # If you change this key, all old sessions will become invalid!
   # Make sure the secret is at least 30 characters and all random, 
