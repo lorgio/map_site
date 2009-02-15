@@ -2,9 +2,15 @@
 class SessionsController < ApplicationController
   # Be sure to include AuthenticationSystem in Application Controller instead
   include AuthenticatedSystem
+  acts_as_iphone_controller # :test_mode => true #, :subdomain => iphone
+
 
   # render new.rhtml
   def new
+    respond_to do |format|
+      format.html # show.html.erb
+      format.iphone
+    end    
   end
 
   def create
@@ -37,7 +43,7 @@ class SessionsController < ApplicationController
 protected
   # Track failed login attempts
   def note_failed_signin
-    flash[:error] = "Couldn't log you in as '#{params[:login]}'"
+    flash[:error] = "Couldn't log you in as '#{params[:login]}' Have you <a href='/signup'>signed up?</a>"
     logger.warn "Failed login for '#{params[:login]}' from #{request.remote_ip} at #{Time.now.utc}"
   end
 end

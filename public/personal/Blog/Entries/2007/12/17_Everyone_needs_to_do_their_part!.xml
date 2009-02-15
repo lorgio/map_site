@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<content collectionGUID="7467CF19-DD46-4FAF-B0CB-CBDD0E9EC078">
+  <lastEdited clientType="local-build-20080527" date="2008-05-27 22:25:46 -0400"/>
+  <textBox id="generic-header-attribute" dynamic="no" visible="yes">
+    <richText>Freestyle</richText>
+  </textBox>
+  <textBox id="generic-body-attributes" dynamic="no" visible="yes">
+    <richText>If you don&#x2019;t pitch in....he can&#x2019;t win!</richText>
+  </textBox>
+  <image id="generic-picture-attributes" dynamic="no" visible="yes" src="17_Everyone_needs_to_do_their_part%21_files/shapeimage_2.png" left="0px" top="0px" width="399px" height="304px"/>
+  <textBox id="generic-datefield-attributes" dynamic="no" visible="yes">
+    <richText>&lt;b&gt;Monday, December 17, 2007&lt;/b&gt;</richText>
+  </textBox>
+  <textBox id="generic-title-attributes" dynamic="no" visible="yes">
+    <richText>Everyone needs to do their part!</richText>
+  </textBox>
+</content>

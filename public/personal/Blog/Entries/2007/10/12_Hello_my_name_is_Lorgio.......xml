@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<content collectionGUID="7467CF19-DD46-4FAF-B0CB-CBDD0E9EC078">
+  <lastEdited clientType="local-build-20080527" date="2008-05-27 22:25:37 -0400"/>
+  <textBox id="generic-header-attribute" dynamic="no" visible="yes">
+    <richText>i think I'm getting ill......    </richText>
+  </textBox>
+  <textBox id="generic-body-attributes" dynamic="no" visible="yes">
+    <richText>And I&#x2019;m a Registered Republican....as of today.  I KNOW I KNOW, from everyone that knows me I have not gone crazy.  and please don&#x2019;t IM me &#x201C;we're not friends anymore - 9 years down the drain in an instant!&#x201D; There is a method to this madness.  I did this to vote for Ron Paul for the NY Republican Primary.  This is hopefully my small step, along with a monetary contribution, to make Dr. Paul, the Republican Candidate.  If he does become the Candidate, I will vote for him for president.  His record is a mirror image of what he preaches, unlike every single other candidate on their soapboxes made of money from lobbyists.&#xD;&#xD;</richText>
+  </textBox>
+  <image id="generic-picture-attributes" dynamic="no" visible="yes" src="12_Hello_my_name_is_Lorgio......_files/shapeimage_2.png" left="0px" top="0px" width="403px" height="304px"/>
+  <textBox id="generic-datefield-attributes" dynamic="no" visible="yes">
+    <richText>&lt;b&gt;Friday, October 12, 2007&lt;/b&gt;</richText>
+  </textBox>
+  <textBox id="generic-title-attributes" dynamic="no" visible="yes">
+    <richText>Hello my name is Lorgio......</richText>
+  </textBox>
+</content>

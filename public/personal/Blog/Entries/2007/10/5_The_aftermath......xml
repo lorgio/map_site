@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<content collectionGUID="7467CF19-DD46-4FAF-B0CB-CBDD0E9EC078">
+  <lastEdited clientType="local-build-20080527" date="2008-05-27 22:25:35 -0400"/>
+  <textBox id="generic-header-attribute" dynamic="no" visible="yes">
+    <richText>and she&#x2019;s......MOVIN OUT.</richText>
+  </textBox>
+  <textBox id="generic-body-attributes" dynamic="no" visible="yes">
+    <richText>So she finally did it. My gf moved out of her house and into her own apt......snif snif. They grow up so fast. I guess she&#x2019;ll be over my place more when i cook since she&#x2019;ll probably be &#x201C;first year indie&#x201D; broke.  It&#x2019;s okay, I don&#x2019;t mind.....as long as she cleans the dishes ;-)</richText>
+  </textBox>
+  <image id="generic-picture-attributes" dynamic="no" visible="yes" src="5_The_aftermath....._files/shapeimage_2.png" left="0px" top="0px" width="403px" height="304px"/>
+  <textBox id="generic-datefield-attributes" dynamic="no" visible="yes">
+    <richText>&lt;b&gt;Friday, October 5, 2007&lt;/b&gt;</richText>
+  </textBox>
+  <textBox id="generic-title-attributes" dynamic="no" visible="yes">
+    <richText>The aftermath.....</richText>
+  </textBox>
+</content>

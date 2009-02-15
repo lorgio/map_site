@@ -18,6 +18,7 @@ class ApplicationController < ActionController::Base
     def set_iphone_format
       if is_iphone_request?
         request.format = :iphone
+        redirect_to :controller => "iphone", :action => "index"
       end
     end
     

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<content collectionGUID="7467CF19-DD46-4FAF-B0CB-CBDD0E9EC078">
+  <lastEdited clientType="local-build-20080527" date="2008-05-27 22:25:32 -0400"/>
+  <textBox id="generic-header-attribute" dynamic="no" visible="yes">
+    <richText>some people draw like i write.... </richText>
+  </textBox>
+  <textBox id="generic-body-attributes" dynamic="no" visible="yes">
+    <richText>So a friend who was going cross country from San Diego, stopped by into Manhattan to see me!.  I&#x2019;m not going to lie and say I know my maps very well. I did know San Diego was in California, and where California is, but other than that, I was lost.  So my friend decided to show me where she lived.  It&#x2019;s a good thing she&#x2019;s a photographer, and not an artist....</richText>
+  </textBox>
+  <image id="generic-picture-attributes" dynamic="no" visible="yes" src="30_A_Photographer%E2%80%99s_version_of_the_US_files/shapeimage_2.png" left="0px" top="0px" width="403px" height="304px"/>
+  <textBox id="generic-datefield-attributes" dynamic="no" visible="yes">
+    <richText>&lt;b&gt;Sunday, September 30, 2007&lt;/b&gt;</richText>
+  </textBox>
+  <textBox id="generic-title-attributes" dynamic="no" visible="yes">
+    <richText>A Photographer&#x2019;s version of the US</richText>
+  </textBox>
+</content>

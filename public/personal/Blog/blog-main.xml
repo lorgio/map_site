@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<rss xmlns:iweb="http://www.apple.com/iweb" version="2.0">
+  <channel>
+    <title>Blog</title>
+    <link>http://lorgiojimenez.com/personal/Blog</link>
+    <description>Random thoughts...on varying things.</description>
+    <item>
+      <title>Everyone needs to do their part!</title>
+      <link>http://lorgiojimenez.com/personal/Blog/Entries/2007/12/17_Everyone_needs_to_do_their_part%21.html</link>
+      <guid isPermaLink="false">00e258fe-163d-4076-9b6b-f18ed41c4cbf</guid>
+      <pubDate>Mon, 17 Dec 2007 09:11:57 -0500</pubDate>
+      <description>If you don&#x2019;t pitch in....he can&#x2019;t win!</description>
+      <iweb:image href="Media/t_Ron%20Paul%20Donation%21.jpg"></iweb:image>
+      <iweb:comment link="http://lorgiojimenez.com/personal/Blog/Entries/2007/12/17_Everyone_needs_to_do_their_part%21.html#comment_layer" count="0" enabled="0"></iweb:comment>
+    </item>
+    <item>
+      <title>Happy Turkey Day    </title>
+      <link>http://lorgiojimenez.com/personal/Blog/Entries/2007/11/22_Happy_Turkey_Day____.html</link>
+      <guid isPermaLink="false">68d7de0d-8c61-4b8d-b93c-e2f1227b5563</guid>
+      <pubDate>Thu, 22 Nov 2007 12:27:36 -0500</pubDate>
+      <description>In this time...an American past time...the symbol of our insane gluttony and over abundance of...well everything!, enjoy.&lt;br/&gt;</description>
+      <iweb:image href="Media/t_ThanksgivingFeast.jpg"></iweb:image>
+      <iweb:comment link="http://lorgiojimenez.com/personal/Blog/Entries/2007/11/22_Happy_Turkey_Day____.html#comment_layer" count="0" enabled="0"></iweb:comment>
+    </item>
+    <item>
+      <title>Fight back with their words......</title>
+      <link>http://lorgiojimenez.com/personal/Blog/Entries/2007/11/16_Fight_back_with_their_words.......html</link>
+      <guid isPermaLink="false">50842a55-411e-405d-8482-5994924ee03d</guid>
+      <pubDate>Fri, 16 Nov 2007 16:37:01 -0500</pubDate>
+      <iweb:image href="Media/dv1461057a.jpg"></iweb:image>
+      <iweb:comment link="http://lorgiojimenez.com/personal/Blog/Entries/2007/11/16_Fight_back_with_their_words.......html#comment_layer" count="0" enabled="0"></iweb:comment>
+    </item>
+    <item>
+      <title>can it snow already!!!!</title>
+      <link>http://lorgiojimenez.com/personal/Blog/Entries/2007/10/24_can_it_snow_already%21%21%21%21.html</link>
+      <guid isPermaLink="false">12f8c100-846a-4d67-8772-4fe2f30b0435</guid>
+      <pubDate>Wed, 24 Oct 2007 13:02:06 -0400</pubDate>
+      <description>Last winter was not a very good winter to go snowboarding on the east coast.  There were hot spots during the winter that made for horrid conditions, and the season didn&#x2019;t really start till like late January.  But this season will be different. This season, will be magnificent.  I bought a new board, and I'm ready to take day trips every weekend.  And with the &lt;a href="http://farmersalmanac.com/"&gt;Farmer&#x2019;s Almanac&lt;/a&gt; stating that it will be a cold and snowy east coast, I&#x2019;M ONE HAPPY RABBIT!</description>
+      <iweb:image href="Media/08usmap_400.jpg"></iweb:image>
+      <iweb:comment link="http://lorgiojimenez.com/personal/Blog/Entries/2007/10/24_can_it_snow_already%21%21%21%21.html#comment_layer" count="0" enabled="0"></iweb:comment>
+    </item>
+    <item>
+      <title>PHI-NA-LEE!    </title>
+      <link>http://lorgiojimenez.com/personal/Blog/Entries/2007/10/23_PHI-NA-LEE%21____.html</link>
+      <guid isPermaLink="false">33092c91-683b-4c1b-86aa-0413f2138a5a</guid>
+      <pubDate>Tue, 23 Oct 2007 22:49:29 -0400</pubDate>
+      <description>that&#x2019;s for the idiots who spell an acronym out...such as lawl.....the correct spelling of something phonetical is el-oh-el....but i digress....&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;GMAIL HAS IMAP!!! GMAIL HAS IMAP!!! GMAIL HAS IMAP!!!!&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;finally i won&#x2019;t have to check my mail using &#x201C;All Mail&#x201D; to check for things that were picked up by my POP iPhone and archived before i noticed.   And having to delete everything from my iPhone that I already read AT work.   Finally things are starting to SYNC up.</description>
+      <iweb:image href="Media/Photo%2017.jpg"></iweb:image>
+      <iweb:comment link="http://lorgiojimenez.com/personal/Blog/Entries/2007/10/23_PHI-NA-LEE%21____.html#comment_layer" count="0" enabled="0"></iweb:comment>
+    </item>
+    <iweb:dateFormat>EEEE, MMMM d, yyyy</iweb:dateFormat>
+    <iweb:baseURL>http://lorgiojimenez.com/personal/Blog</iweb:baseURL>
+    <iweb:maximumSummaryItems>5</iweb:maximumSummaryItems>
+  </channel>
+</rss>

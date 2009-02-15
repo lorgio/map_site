@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<content collectionGUID="7467CF19-DD46-4FAF-B0CB-CBDD0E9EC078">
+  <lastEdited clientType="local-build-20080527" date="2008-05-27 22:25:34 -0400"/>
+  <textBox id="generic-header-attribute" dynamic="no" visible="yes">
+    <richText>SHUT UP SHUT UP SHUT UP SHUT UP!!!!</richText>
+  </textBox>
+  <textBox id="generic-body-attributes" dynamic="no" visible="yes">
+    <richText>....if you are going to complain!&#xD;&#xD;So you don&#x2019;t want AT&amp;T, and hack a phone that is currently locked down due to exclusive contracts?...but complain when it gets re-locked after countless of notices by Apple?&#xD;&#xD;get AT&amp;T, wait till it&#x2019;s open....or get ANOTHER PHONE.&#xD;&#xD;Are you crying over the fact that 3rd party apps are locked out as of now with the new update?&#xD;&#xD;Get yourself an &lt;a href="http://www.openmoko.org/"&gt;Open Source Phone&lt;/a&gt; and stop complaining. &#xD;&#xD;What really bothers me....is that people have become cry-freakin babies!  People are suing over  CRAP!. &#xD;&#xD;PLEASE....get a nokia and stop using a computer, you&#x2019;re clogging up my news feeds</richText>
+  </textBox>
+  <image id="generic-picture-attributes" dynamic="no" visible="yes" src="2_don%E2%80%99t_buy_an_iphone......_____files/shapeimage_2.png" left="0px" top="0px" width="333px" height="303px"/>
+  <textBox id="generic-datefield-attributes" dynamic="no" visible="yes">
+    <richText>&lt;b&gt;Tuesday, October 2, 2007&lt;/b&gt;</richText>
+  </textBox>
+  <textBox id="generic-title-attributes" dynamic="no" visible="yes">
+    <richText>don&#x2019;t buy an iphone......    </richText>
+  </textBox>
+</content>

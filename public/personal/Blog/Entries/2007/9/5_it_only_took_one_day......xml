@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<content collectionGUID="7467CF19-DD46-4FAF-B0CB-CBDD0E9EC078">
+  <lastEdited clientType="local-build-20080527" date="2008-05-27 22:25:30 -0400"/>
+  <textBox id="generic-header-attribute" dynamic="no" visible="yes">
+    <richText>iTunes Ringtone Hacked!</richText>
+  </textBox>
+  <textBox id="generic-body-attributes" dynamic="no" visible="yes">
+    <richText>and the iTunes 7.4 Ringtones were &lt;i&gt;&lt;a href="http://www.engadget.com/2007/09/07/simple-hackery-enables-free-itunes-ringtones/"&gt;hacked to automatically use free ones&lt;/a&gt;&lt;/i&gt;.  It seems that with an easy renaming of a file extension and a double click, iTunes will recognize the file as a ringtone and properly import it into the iTunes database.  While I still believe that apple had to &#x201C;charge&#x201D; you to make your ringtones, the ease of hacking shows me that they don&#x2019;t really care all that much.  It goes to show that apple is on the side of the consumer, while companies like Microsoft and amazon side with the content holders, not the people who BUY from them.  Well, it&#x2019;ll be one less step and no more use of iFuntastic.</richText>
+  </textBox>
+  <image id="generic-picture-attributes" dynamic="no" visible="yes" src="5_it_only_took_one_day....._files/shapeimage_2.png" left="0px" top="0px" width="403px" height="304px"/>
+  <textBox id="generic-datefield-attributes" dynamic="no" visible="yes">
+    <richText>&lt;b&gt;Wednesday, September 5, 2007&lt;/b&gt;</richText>
+  </textBox>
+  <textBox id="generic-title-attributes" dynamic="no" visible="yes">
+    <richText>it only took one day.....</richText>
+  </textBox>
+</content>

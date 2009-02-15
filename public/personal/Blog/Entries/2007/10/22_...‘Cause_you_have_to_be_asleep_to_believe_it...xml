@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<content collectionGUID="7467CF19-DD46-4FAF-B0CB-CBDD0E9EC078">
+  <lastEdited clientType="local-build-20080527" date="2008-05-27 22:25:40 -0400"/>
+  <textBox id="generic-header-attribute" dynamic="no" visible="yes">
+    <richText>It&#x2019;s Called the american Dream......</richText>
+  </textBox>
+  <textBox id="generic-body-attributes" dynamic="no" visible="yes">
+    <richText>It&#x2019;s sad that I feel the same way about this.  Our politicians &#x201C;borrowed&#x201D; money from our Social Security Fund to pay off deficits....but we&#x2019;ll never see that money again.  With people pushing to have Social Security privatized, we&#x2019;ll just loose all our money just like everyone lost everything in Enron.  It&#x2019;s time for change......it&#x2019;s time for Ron Paul.</richText>
+  </textBox>
+  <image id="generic-picture-attributes" dynamic="no" visible="yes" src="22_...%E2%80%98Cause_you_have_to_be_asleep_to_believe_it.._files/shapeimage_2.png" left="0px" top="0px" width="403px" height="304px"/>
+  <textBox id="generic-datefield-attributes" dynamic="no" visible="yes">
+    <richText>&lt;b&gt;Monday, October 22, 2007&lt;/b&gt;</richText>
+  </textBox>
+  <textBox id="generic-title-attributes" dynamic="no" visible="yes">
+    <richText>...&#x2018;Cause you have to be asleep to believe it..</richText>
+  </textBox>
+</content>

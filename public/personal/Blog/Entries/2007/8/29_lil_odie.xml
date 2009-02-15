@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<content collectionGUID="7467CF19-DD46-4FAF-B0CB-CBDD0E9EC078">
+  <lastEdited clientType="local-build-20080527" date="2008-05-27 22:25:27 -0400"/>
+  <textBox id="generic-header-attribute" dynamic="no" visible="yes">
+    <richText>lil odie </richText>
+  </textBox>
+  <textBox id="generic-body-attributes" dynamic="no" visible="yes">
+    <richText>This is Odysseus, or Odie for short.  He&#x2019;s an Irish Short Legged Jack Russell Terrier.  He goes by many names, My dad calls him &#x201C;The little terrorist&#x201D;.  I&#x2019;m not very familiar with Jack Russells, but odie sleeps like a normal human being, not really like a dog.  he lies sideways as you can see, and usually puts his head(only) on a pillow and covers up half his body under the sheets.  it&#x2019;s very odd but extremely funny.</richText>
+  </textBox>
+  <image id="generic-picture-attributes" dynamic="no" visible="yes" src="29_lil_odie_files/shapeimage_2.png" left="0px" top="0px" width="403px" height="304px"/>
+  <textBox id="generic-datefield-attributes" dynamic="no" visible="yes">
+    <richText>&lt;b&gt;Wednesday, August 29, 2007&lt;/b&gt;</richText>
+  </textBox>
+  <textBox id="generic-title-attributes" dynamic="no" visible="yes">
+    <richText>lil odie</richText>
+  </textBox>
+</content>

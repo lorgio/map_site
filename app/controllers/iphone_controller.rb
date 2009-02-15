@@ -22,7 +22,6 @@ class IphoneController < ApplicationController
   
   def show
     @vcard = Vcard.find(params[:id])
-
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @vcard }

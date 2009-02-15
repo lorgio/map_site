@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<content collectionGUID="7467CF19-DD46-4FAF-B0CB-CBDD0E9EC078">
+  <lastEdited clientType="local-build-20080527" date="2008-05-27 22:25:42 -0400"/>
+  <textBox id="generic-header-attribute" dynamic="no" visible="yes">
+    <richText>mmm.....snow.....</richText>
+  </textBox>
+  <textBox id="generic-body-attributes" dynamic="no" visible="yes">
+    <richText>Last winter was not a very good winter to go snowboarding on the east coast.  There were hot spots during the winter that made for horrid conditions, and the season didn&#x2019;t really start till like late January.  But this season will be different. This season, will be magnificent.  I bought a new board, and I'm ready to take day trips every weekend.  And with the &lt;a href="http://farmersalmanac.com"&gt;Farmer&#x2019;s Almanac&lt;/a&gt; stating that it will be a cold and snowy east coast, I&#x2019;M ONE HAPPY RABBIT!</richText>
+  </textBox>
+  <image id="generic-picture-attributes" dynamic="no" visible="yes" src="24_can_it_snow_already%21%21%21%21_files/shapeimage_2.png" left="0px" top="0px" width="403px" height="304px"/>
+  <textBox id="generic-datefield-attributes" dynamic="no" visible="yes">
+    <richText>&lt;b&gt;Wednesday, October 24, 2007&lt;/b&gt;</richText>
+  </textBox>
+  <textBox id="generic-title-attributes" dynamic="no" visible="yes">
+    <richText>can it snow already!!!!</richText>
+  </textBox>
+</content>

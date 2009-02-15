@@ -8,12 +8,10 @@ class VcardsController < ApplicationController
   def index
     @vcards = Vcard.find(:all, :conditions => "state='NY'")
     @vcard = Vcard.new
-
     @map = GMap.new("map_div_id")  
     @map.control_init(:large_map => true, :map_type => true)  
     @map.center_zoom_init([40.764762,	-73.978232], 15)  
     markers = []
-
     @vcards.each do |card|
       if card.eql?(@vcards.first)
         @map.overlay_init(GMarker.new([card.lat, card.lng], :info_window => card.org))

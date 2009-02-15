@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<content collectionGUID="7467CF19-DD46-4FAF-B0CB-CBDD0E9EC078">
+  <lastEdited clientType="local-build-20080527" date="2008-05-27 22:25:41 -0400"/>
+  <textBox id="generic-header-attribute" dynamic="no" visible="yes">
+    <richText>:-D</richText>
+  </textBox>
+  <textBox id="generic-body-attributes" dynamic="no" visible="yes">
+    <richText>that&#x2019;s for the idiots who spell an acronym out...such as lawl.....the correct spelling of something phonetical is el-oh-el....but i digress....&#xD;&#xD;&#xD;GMAIL HAS IMAP!!! GMAIL HAS IMAP!!! GMAIL HAS IMAP!!!!&#xD;&#xD;&#xD;finally i won&#x2019;t have to check my mail using &#x201C;All Mail&#x201D; to check for things that were picked up by my POP iPhone and archived before i noticed.   And having to delete everything from my iPhone that I already read AT work.   Finally things are starting to SYNC up.</richText>
+  </textBox>
+  <image id="generic-picture-attributes" dynamic="no" visible="yes" src="23_PHI-NA-LEE%21_____files/shapeimage_2.png" left="0px" top="0px" width="403px" height="304px"/>
+  <textBox id="generic-datefield-attributes" dynamic="no" visible="yes">
+    <richText>&lt;b&gt;Tuesday, October 23, 2007&lt;/b&gt;</richText>
+  </textBox>
+  <textBox id="generic-title-attributes" dynamic="no" visible="yes">
+    <richText>PHI-NA-LEE!    </richText>
+  </textBox>
+</content>
