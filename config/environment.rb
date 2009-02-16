@@ -43,8 +43,8 @@ Rails::Initializer.run do |config|
   # Run "rake -D time" for a list of tasks for finding time zone names. Uncomment to use default local time.
   config.time_zone = 'UTC'
 
-  # config.gem 'vpim'
-  config.gem 'rubyist-aasm'
+  config.gem 'vpim'
+  config.gem 'rubyist-aasm', :lib => "aasm", :source => "http://gems.github.com"
   
   config.active_record.observers = :user_observer
   
